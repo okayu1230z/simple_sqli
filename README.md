@@ -2,7 +2,7 @@
 
 Very simple SQL injection environment with docker
 
-# Environment
+## Environment
 
 docker-compose.yml for sqli
 
@@ -10,14 +10,14 @@ docker-compose.yml for sqli
 - PHP : php.7-fpm
 - DB : MySQL 5.7
 
-# How to setup
+## How to setup
 
 ```
 $ docker-compose build
 $ docker-compose up
 ```
 
-# How to exploit
+## How to exploit
 
 You can get the flag like this:
 
