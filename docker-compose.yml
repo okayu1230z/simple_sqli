@@ -1,0 +1,38 @@
+version: '3'
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports:
+        - 8080:80
+    depends_on:
+      - php
+    network_mode: simple-sqli-network
+
+  php:
+    container_name: php
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    network_mode: simple-sqli-network
+
+  mysql:
+    container_name: mysql
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+    volumes:
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/logs:/var/log/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=sqlidb
+      - MYSQL_USER=sqli
+      - MYSQL_PASSWORD=sqlipass
+    network_mode: simple-sqli-network
+
+networks:
+  simple-sqli-network:
