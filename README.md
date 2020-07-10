@@ -19,11 +19,14 @@ $ docker-compose up
 
 ## How to exploit
 
-
-
 Please visit localhost:8080.
+
+![simple sqli](https://github.com/okayu1230z/ctf_data/blob/master/simple_sqli/simple_sql_prob.png "simple sqli")
+
 You can get the flag like this:
 
 ```
 ' or 1;
 ```
+
+![simple sqli ans](https://github.com/okayu1230z/ctf_data/blob/master/simple_sqli/simple_sql_answer.png "simple sqli ans")
