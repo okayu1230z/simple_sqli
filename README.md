@@ -19,6 +19,9 @@ $ docker-compose up
 
 ## How to exploit
 
+
+
+Please visit localhost:8080.
 You can get the flag like this:
 
 ```
