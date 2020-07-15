@@ -13,6 +13,7 @@ docker-compose.yml for sqli
 ## How to setup
 
 ```
+$ docker network create simple-sqli-network
 $ docker-compose build
 $ docker-compose up
 ```
